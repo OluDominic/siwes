@@ -1,0 +1,51 @@
+.welcome {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px 5px;
+    padding: 4px 8px;
+    text-align: center;
+    color: cornflowerblue;
+    margin-top: 800px;
+    font-size: 35px;
+}
+
+.digital {
+    padding: 8px;
+    margin-left: 60px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(24, 53, 54);
+    text-shadow: 2px 2px;
+}
+
+.words {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(238, 236, 245);
+    margin-left: 0px;
+}
+
+.txt {
+    float: left;
+    margin-left: 60px;
+    padding: 8px 14px;
+    font-size: 15px;
+    width: 500px;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: rgb(58, 55, 55);
+}
+.Pic {
+    float: right;
+    margin-right: 0;
+    width: 50%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.Pic:hover {
+    transform: scaleX(-1);
+}

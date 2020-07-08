@@ -1,0 +1,129 @@
+
+.logbook {
+    background-color: rgb(242, 242, 243);
+    background-image: linear-gradient(to left, rgb(177, 196, 219), white );
+}
+
+.stuPortal {
+    text-align: center;
+    color: white;
+}
+.top {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(33, 33, 99);
+    padding: 15px;
+}
+
+.body {
+    margin: 20px 25px;
+    padding: 8px 0;
+}
+
+.logo {
+    width: 100px;
+    height: 90px;
+    float: left;
+    margin-left: -200px;
+}
+
+.workdone {
+    color: rgb(12, 101, 190);
+    font-size: 30px;
+    margin-left: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.des {
+    font-size: 20px;
+    color: rgb(25, 11, 110);
+    font-weight: bold;
+}
+
+.date {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-family: monospace;
+    padding: 4px 0;
+    border-style: outset;
+    border-color: black;
+    background-color: rgb(103, 144, 197);
+}
+
+.note {
+    padding: 4px 2px;
+    border: 2px solid black;
+    margin-left: 0px;
+    display: block;
+    width: 300px;
+    height: 150px;
+    font-style: unset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tex {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: inherit;
+    border: 2px solid black;
+}
+
+.notice {
+    font-size: 13px;
+    font-weight: 700;
+    font-style: oblique;
+    color: rgb(88, 85, 55);
+}
+
+.file {
+    background-color: turquoise;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 8px 0;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.entry {
+    margin-left: 10%;
+}
+
+.save, .upload {
+    background-color: rgb(53, 105, 173);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 5px;
+    width:100px;
+    text-transform: uppercase;
+    margin: 20px 10px;
+}
+
+.save:hover {
+    background-color: #293c41;
+}
+
+.upload:hover {
+    background-color: #293c41;
+}
+
+.div {
+    height: 150px;
+    background-color: blue;
+    background-image: linear-gradient(rgb(56, 56, 209), white);
+    text-align: center;
+}
+
+.bottomText {
+    margin-top: 100%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

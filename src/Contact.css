@@ -1,0 +1,24 @@
+.contact {
+    background-image: linear-gradient(lightblue, white);
+}
+
+.conta {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+.contMain {
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 8px;
+}
+
+.contHead {
+    color: darkturquoise;
+    padding: 2px 4px;
+}
+

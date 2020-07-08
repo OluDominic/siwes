@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(6, 30, 31);
+}
+
+.link:active {
+    color: white
+}
