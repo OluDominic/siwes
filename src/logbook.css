@@ -1,7 +1,6 @@
 
 .logbook {
-    background-color: rgb(242, 242, 243);
-    background-image: linear-gradient(to left, rgb(177, 196, 219), white );
+    background-color: rgb(230, 230, 233);
 }
 
 .stuPortal {
@@ -11,7 +10,7 @@
 .top {
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(33, 33, 99);
+    background-color: rgb(0, 0, 9);
     padding: 15px;
 }
 
@@ -24,19 +23,20 @@
     width: 100px;
     height: 90px;
     float: left;
-    margin-left: -200px;
+    margin-left: 100px;
 }
 
 .workdone {
-    color: rgb(12, 101, 190);
+    color: rgb(1, 1, 1);
     font-size: 30px;
+    text-align: center;
     margin-left: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .des {
     font-size: 20px;
-    color: rgb(25, 11, 110);
+    color: rgb(2, 1, 1);
     font-weight: bold;
 }
 
@@ -47,7 +47,6 @@
     padding: 4px 0;
     border-style: outset;
     border-color: black;
-    background-color: rgb(103, 144, 197);
 }
 
 .note {
@@ -76,48 +75,52 @@
 }
 
 .file {
-    background-color: turquoise;
+    background-color: white;
     color: rgb(0, 0, 0);
     display: inline-block;
     padding: 8px 0;
     border: 2px solid #000000;
     border-radius: 4px;
     cursor: pointer;
+    width: 180px;
 }
 
 .entry {
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 .save, .upload {
-    background-color: rgb(53, 105, 173);
-    color: #ffffff;
+    
+    background-color: #000000;
+    color: white;
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
     padding: 14px 20px;
     text-align: center;
-    border-radius: 5px;
     width:100px;
     text-transform: uppercase;
     margin: 20px 10px;
+    border-radius: 5px;
 }
 
 .save:hover {
-    background-color: #293c41;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 2px solid black;
 }
 
 .upload:hover {
-    background-color: #293c41;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
 }
-
 .div {
     height: 150px;
     background-color: blue;
-    background-image: linear-gradient(rgb(56, 56, 209), white);
+    background-image: linear-gradient(rgb(8, 8, 8), white);
     text-align: center;
 }
 

@@ -1,11 +1,18 @@
 .welcome {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: fantasy;
     margin: 10px 5px;
     padding: 4px 8px;
+    padding: 40px;
     text-align: center;
-    color: cornflowerblue;
-    margin-top: 800px;
-    font-size: 35px;
+    color: rgb(9, 10, 10);
+    margin-top: 750px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.welcome:hover {
+    transform: rotate(360deg);
+    transition: all 5s ease-in-out;
 }
 
 .digital {
@@ -18,11 +25,9 @@
 }
 
 .words {
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgb(238, 236, 245);
-    margin-left: 0px;
 }
 
 .txt {
@@ -39,13 +44,17 @@
     color: rgb(58, 55, 55);
 }
 .Pic {
-    float: right;
     margin-right: 0;
-    width: 50%;
     height: 500px;
     border-radius: 8px;
+    position: relative;
+    perspective: 600;
 }
 
 .Pic:hover {
     transform: scaleX(-1);
+}
+
+.home-body {
+    margin-bottom: 0;
 }

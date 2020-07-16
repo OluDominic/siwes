@@ -1,7 +1,5 @@
 
-.registrationForm {
-    background-image: linear-gradient(lightblue, white);
-}
+
 
 .regHere {
     text-align: center;
@@ -9,19 +7,19 @@
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 4px;
-    color: blue;
+    color: black;
 }
 
  .regForm{
     padding: 20px;
     color: white;
-    background-color: blue;
+    background-color: black;
     font-family: monospace;
     text-align: center;
  }
 .enter {
     color: black;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     font-style: initial;
 }
@@ -32,8 +30,7 @@
     padding: 20px;
     border-radius: 4px;
     display: inline-block;
-    margin-left: 15%;
-    margin-right: 0%;
+    margin-left: 5%;
 }
 
 
@@ -48,7 +45,7 @@ input, .select {
     background-color: white;
 }
 
-.select {
+.select-level {
     padding: 6px 20px;
     margin: 8px 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -57,9 +54,10 @@ input, .select {
     display: inline-block;
     width: 250px;
     background-color: rgb(219, 226, 240);
+    position: relative;
 }
-.button {
-    background-color: #2544a0;;
+.reg-button {
+    background-color: #030303;
     color: #ffffff;
     display: inline-block;
     font-size: 15px;
@@ -70,14 +68,16 @@ input, .select {
     padding: 14px 20px;
     text-align: center;
     border-radius: 5px;
-    width:290px;
+    width:300px;
     text-transform: uppercase;
     margin: 20px 0px;
-    z-index: 1;
+    margin-top: 10%;
 }
 
-.button:hover {
-    background-color: #020201;
+.reg-button:hover {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid black;
 }
 
 .regBottom {

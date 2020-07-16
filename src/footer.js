@@ -16,7 +16,7 @@ const Footer =(props)=>{
                         <FontAwesomeIcon icon={faCopyright}/>
                         </span> 2020. All rigths reserved.<br/>
                         <span className="ContactUs">Contact us Here </span>
-                        <div>
+                        <div className="footer-icons">
                             <Link to="/https://www.facebook.com/groups/1614015922252171/">
                         <FontAwesomeIcon icon={faFacebook}/>{" "}
                         </Link>

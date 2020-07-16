@@ -1,22 +1,26 @@
 
 .foot {
-    background-color: cornflowerblue;
+    background-image: linear-gradient(to right, rgb(71, 66, 66), white);
 }
 
 .words {
-    color: black;
+    color: white;
     text-align: center;
-    background-color: cornflowerblue;
     padding: 20px;
 }
 
 .copyright {
-    padding: 80px;
+    padding: 100px;
     text-align: center;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .ContactUs {
     font-size: 20px;
     font-weight: bold;
+}
+
+.footer-icons {
+    font-size: 40px;
 }

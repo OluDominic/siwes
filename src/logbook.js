@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from "./siweslogo.png";
 import './logbook.css'
+import StudentAccount from './studentaccount'
 
 class Log extends React.Component {
 
@@ -75,6 +76,9 @@ render(){
             <div className="top">
                 <img className="logo" src={Logo} alt="Logo"/>
                 <h1 className="stuPortal">Logbook</h1>
+            </div>
+            <div>
+                <StudentAccount />
             </div>
             <div className="body">
                 <h4 className="workdone">New Work Done</h4>
