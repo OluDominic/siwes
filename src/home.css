@@ -1,18 +1,38 @@
 .welcome {
-    font-family: fantasy;
+    background: rgb(71, 66, 66);
     margin: 10px 5px;
     padding: 4px 8px;
     padding: 40px;
     text-align: center;
-    color: rgb(9, 10, 10);
-    margin-top: 750px;
-    margin-bottom: 50px;
-    font-size: 50px;
+    font-size: 30px;
+    top: 0;
 }
 
-.welcome:hover {
-    transform: rotate(360deg);
-    transition: all 5s ease-in-out;
+.welcome span {
+    color: transparent;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    z-index: 0;
+}
+
+.welcome span::before, .welcome span::after {
+    content: 'Welcome to the Digital SIWES platform';
+    position: absolute;
+    left: 0;
+    color: #222;
+}
+
+.welcome span::before {
+    z-index: 1;
+    background: -webkit-linear-gradient(transparent, transparent);
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome span::after {
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.2);
+    z-index: -1;
 }
 
 .digital {

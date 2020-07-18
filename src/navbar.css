@@ -140,6 +140,11 @@ ul {
     transition: transform 2s;
 }
 
-.imgText:hover {
-    transform: rotate(1080deg);
+.imgText.active{
+    transform: scale(1.5);
+}
+
+.digitalWorld.active {
+    color: blueviolet;
+    transition: 2s;
 }

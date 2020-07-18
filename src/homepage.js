@@ -12,6 +12,7 @@ import history from './History'
 import placement from './placement'
 import Navbar from './navbar';
 import Account from './studentaccount'
+import LoginScreen from './LoginScreen'
 
   class Homepage extends React.Component {
     state = {redirect: null, reg: null}
@@ -32,6 +33,7 @@ import Account from './studentaccount'
       <Route path="/logbook" component={logbook}/>
       <Route path="/placement" component={placement}/>
       <Route path="/account" component={Account}/>
+      <Route path="/loginScreen" component={LoginScreen} />
       <Route component={notFound}/>
       </Switch>
    

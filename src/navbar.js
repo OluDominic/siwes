@@ -5,10 +5,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css'
 import {Link,NavLink,withRouter } from 'react-router-dom'
+import LoginScreen from './LoginScreen';
 
-const Navbar =(props)=>{
-    console.log(props)
-return (
+class Navbar extends React.Component{
+    constructor(props){
+      super(props);
+      this.state = {
+        loginPage: [],
+        uploadScreen: []
+      }
+    }
+
+    componentWillMount(){
+      var loginPage = [];
+      loginPage.push(<LoginScreen parentContext= {this}/>);
+      this.setState({
+        loginPage:loginPage
+      })
+    }
+  render(){
+     return (
     <nav className="nav-wrapperred-darken-3">
         <div className="container">
             <div className="nav">
@@ -55,12 +71,18 @@ return (
             </div>
             <div className="container">
             <img className="office" src={Office} alt={Office}/>
-            <div className="imgText">Trasnforming SIWES into the digital world</div>
+            <div className="imgText">Trasnforming SIWES into the <span className="digitalWorld">digital world</span></div>
             </div>
             </div>
         </div>
+        <div className="App">
+       /* {this.state.loginPage}
+        {this.state.uploadScreen}
+      </div>
     </nav>
+
 )
+}
 }
 
 export default withRouter(Navbar)
