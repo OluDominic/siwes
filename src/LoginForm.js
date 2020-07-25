@@ -17,9 +17,9 @@ class Login extends React.Component {
         })
     }
 
-    //onSubmit=()=>{
-        //this.props.history.push('/logbook')
-    //}
+    onSubmit=()=>{
+        this.props.history.push('/logbook')
+    }
     
     loginChangeHandler=(event)=>{
         this.setState({ username: event.target.value})
@@ -95,7 +95,7 @@ class Login extends React.Component {
                         </span>
                         </div>
                         </div>
-                        <input type="button" className="but" onClick={this.handleClick} value="login" />
+                        <input type="button" className="but" onClick={this.onSubmit} value="login" />
                         </div>
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 
 .foot {
-    background-image: linear-gradient(to right, rgb(71, 66, 66), white);
+    background-color: gray;
+    color: honeydew;
 }
 
 .words {

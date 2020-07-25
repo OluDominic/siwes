@@ -71,13 +71,14 @@ class Navbar extends React.Component{
             </div>
             <div className="container">
             <img className="office" src={Office} alt={Office}/>
-            <div className="imgText">Trasnforming SIWES into the <span className="digitalWorld">digital world</span></div>
+            <div className="imgText">
+              <span>Trasnforming SIWES into the <span className="digitalWorld">digital world</span></span>
+              </div>
             </div>
             </div>
         </div>
         <div className="App">
-       /* {this.state.loginPage}
-        {this.state.uploadScreen}
+     
       </div>
     </nav>
 

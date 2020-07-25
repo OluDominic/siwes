@@ -119,8 +119,7 @@
 }
 .div {
     height: 150px;
-    background-color: blue;
-    background-image: linear-gradient(rgb(8, 8, 8), white);
+    background-color: gray;
     text-align: center;
 }
 
