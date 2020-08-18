@@ -15,14 +15,15 @@ import Account from './studentaccount'
 import LoginScreen from './LoginScreen'
 
   class Homepage extends React.Component {
-    state = {redirect: null, reg: null}
-
+    constructor(props){
+      super(props)
+      this.state={user: {}}
+    }
 
     render(){
       return(
   <BrowserRouter history={history}>
     <div className="">
- 
       <Switch>
       <Route exact path="/" component={Home} />
       <Redirect exact from="/" to="/about.js"/>

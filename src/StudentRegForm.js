@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select'
 import axios from 'axios';
+import firebase from './config/firebase'
 import Courses from './StudentRegCourses';
 import Login from './LoginForm';
 
@@ -60,6 +61,7 @@ class Registration extends React.Component {
     matno: '',
     course: '',
     level: '',
+    error: null
     }
     }
 
@@ -71,6 +73,33 @@ class Registration extends React.Component {
     changePass = ev => {
         this.setState({ change: !this.state.change })
     }
+
+    handleInputChange=(event)=> {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    };
+    handleSubmit=(event)=> {
+        event.preventDefault();
+        const { email, pass, matno } = this.state
+        firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, pass)
+        .then(() => {
+            const user = firebase.auth().currentUser;
+            user
+            .updateProfile({matricNo: matno})
+            .then(() => {
+                this.props.history.push('/')
+            })
+            .catch(error => {
+                this.setState({error});
+            })
+        })
+        .catch((error) => {
+            this.setState({ error: error });
+        })
+    }
     onSubmit=()=>{
         this.props.history.push('/placement')
     }
@@ -79,7 +108,7 @@ class Registration extends React.Component {
      }
     
      handleClick(event) {
-         var apiBaseUrl = "http://localhost:4000/api/";
+         var apiBaseUrl = "http://localhost:3000/api/";
 
        console.log("values", this.state.firstname, this.state.lastname,
        this.state.email, this.state.pass, this.state.matno, 
@@ -117,8 +146,7 @@ class Registration extends React.Component {
      }
     
     render(){
-        const { title } = this.props;
-        const { password } = this.state
+        const { email, password, error } = this.state
         //const { selectedOption } = this.state;
 
         return(
@@ -126,6 +154,8 @@ class Registration extends React.Component {
                 <h1 className="regForm">Registration Form</h1>
                 <div  className="reg">
                     <h3 className="regHere">Register here</h3>
+
+                <form onClick={this.handleSubmit}>
                     <p className="enter">Enter First Name</p>
                     <input type="text" className="fname" name="fname" onChange= {(event, newValue) =>
                     this.setState({firstname: newValue})
@@ -135,13 +165,10 @@ class Registration extends React.Component {
                     this.setState({lastname: newValue})
                     } placeholder="Last name" />
                     <p className="enter">Enter Email-address</p>
-                    <input type="email" className="email" onChange= {(event, newValue) =>
-                    this.setState({email: newValue})
-                    } name="email"/>
+                    <input type="email" className="email" onChange= {this.handleInputChange} name="email"/>
                     <p className="enter">Enter Password</p>
                     <div style={{ 'position': 'relative'}}>
-                    <input id="effect" onChange= {(event, newValue) =>
-                    this.setState({pass: newValue})
+                    <input id="effect" onChange= {this.handleInputChange
                     } placeholder="Password"  type={password ? "password" : "input"} name="password" />
                         <span onClick={this.changePassword}>
                             <span>
@@ -184,7 +211,9 @@ class Registration extends React.Component {
                 autoFocus = {true}
                 />
 
-                    <input className="reg-button" type="button" value="Continue" onClick={this.handleClick}/>
+                    <input className="reg-button" type="button" value="Continue" />
+
+                </form>
                 </div>
                 <div className="regBottom"></div>
             </div>

@@ -1,15 +1,20 @@
 import React from 'react';
 import './LoginForm.css';
 import Logbook from './logbook'
+import fire from './config/firebase';
 import Pic from './loginstu.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
 
 class Login extends React.Component {
     constructor(props){
         super(props);
-        this.state={submitted: "", username: "", password: true, redirect: null, pass: ''}
+        this.state={submitted: "",
+        user: {},
+         username: "",
+          password: true,
+           redirect: null,
+            pass: ''}
     }
     changePassword=(e)=>{
         this.setState({
@@ -20,48 +25,27 @@ class Login extends React.Component {
     onSubmit=()=>{
         this.props.history.push('/logbook')
     }
+    componentDidMount(){
+        this.authListener()
+    }
     
     loginChangeHandler=(event)=>{
         this.setState({ username: event.target.value})
     }
 
-    loginSubmitHandler=(event)=>{
+    handleSubmit =(event)=> {
         event.preventDefault();
-        this.setState({submitted: true, login: this.state.login})
-    }
-
-    handleClick(event){
-        var apiBaseUrl = "gttp://localhost:4000/api/";
-        var self = this;
-        var payload = {
-            "matno": this.state.username,
-            "password": this.state.pass
-        }
-        axios.post(apiBaseUrl+'login', payload)
-        .then(function (response) {
-            console.log(response);
-            if (response.data.code == 200) {
-                console.log("Login successfull");
-                var logbook=[];
-                logbook.push(<Logbook appContext=
-                    {self.props.appContext}/>)
-                self.props.appContext.setState({loginPage:[],
-                logbook:logbook})
-            } else if (response.data.code == 204) {
-                console.log("Username password do not match");
-                alert("username password do not match")
-            } else {
-                console.log("Username does not exists");
-                alert("Username does not exist");
-            }
-
+        const { username, password } = this.state;
+        fire
+        .auth()
+        .signInWithEmailAndPassword(username, password)
+        .then((user) => {
+            this.props.history.push('/');
         })
-        .catch(function (error) {
-            console.log(error);
+        .catch((error) => {
+            this.setState({ error: error});
         })
     }
-
-
     render(){
         const {password} = this.state;
         
@@ -72,19 +56,20 @@ class Login extends React.Component {
                 <div>
                     
                 <img src={Pic} alt={Pic}/>
-                    <form onSubmit={this.loginSubmitHandler}>
+                    <form onSubmit={this.handleSubmit}>
                         
                         <div className="loginDetails">
                         <h3 className="signIn" style={{'margin-right': '200px'}}>Sign In</h3>
                         <input id="effect" type="text" placeholder="Mat-no" name="username" onChange={(event, newValue) =>
-                        
-                        this.setState({username: newValue})} value={this.loginDetails}/>
+                        this.setState({username: newValue})} value={this.username}/>
+
                         <div>
                         <div style={{ 'position': 'relative'}}>
                         <input id="effect" onChange={(event,newValue)=> 
                         this.setState({pass: newValue})
                         }
-                         placeholder="Password"  type={password ? "password" : "input"} name="password" />
+                         placeholder="Password"  type={password ? "password" : "input"} name="password" 
+                         value={this.pass} />
                         <span onClick={this.changePassword}>
                             <span>
                                 {password ? 
@@ -95,7 +80,7 @@ class Login extends React.Component {
                         </span>
                         </div>
                         </div>
-                        <input type="button" className="but" onClick={this.onSubmit} value="login" />
+                        <input type="button" className="but" value="login" />
                         </div>
                     </form>
                 </div>
