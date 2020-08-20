@@ -1,6 +1,4 @@
 
-
-
 .regHere {
     text-align: center;
     text-decoration: solid;
@@ -84,3 +82,17 @@ input, .select {
     padding: 35px;
 
 } 
+
+.reg-log {
+    padding: 6px 10px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+    color: grey;
+}
+
+.login-acc {
+    list-style-type: none;
+    display: inline-block;
+    color: darkolivegreen;
+}

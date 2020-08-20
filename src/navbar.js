@@ -5,24 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css'
 import {Link,NavLink,withRouter } from 'react-router-dom'
-import LoginScreen from './LoginScreen';
 
 class Navbar extends React.Component{
-    constructor(props){
-      super(props);
-      this.state = {
-        loginPage: [],
-        uploadScreen: []
-      }
-    }
 
-    componentWillMount(){
-      var loginPage = [];
-      loginPage.push(<LoginScreen parentContext= {this}/>);
-      this.setState({
-        loginPage:loginPage
-      })
-    }
   render(){
      return (
     <nav className="nav-wrapperred-darken-3">

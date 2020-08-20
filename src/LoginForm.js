@@ -25,9 +25,6 @@ class Login extends React.Component {
     onSubmit=()=>{
         this.props.history.push('/logbook')
     }
-    componentDidMount(){
-        this.authListener()
-    }
     
     loginChangeHandler=(event)=>{
         this.setState({ username: event.target.value})

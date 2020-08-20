@@ -7,6 +7,7 @@ import axios from 'axios';
 import firebase from './config/firebase'
 import Courses from './StudentRegCourses';
 import Login from './LoginForm';
+import { Link } from 'react-router-dom';
 
 const options = [
     { value: '100', label: '100'},
@@ -211,9 +212,14 @@ class Registration extends React.Component {
                 autoFocus = {true}
                 />
 
-                    <input className="reg-button" type="button" value="Continue" />
+                    <input className="reg-button" type="button" onClick={this.handleSubmit} value="Continue" />
 
                 </form>
+                <p className="reg-log">Already have an account? 
+                    <Link className="login-acc" to="/login">
+                        Login here
+                    </Link>
+                </p>
                 </div>
                 <div className="regBottom"></div>
             </div>
