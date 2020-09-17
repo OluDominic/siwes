@@ -37,7 +37,7 @@ class Login extends React.Component {
         .auth()
         .signInWithEmailAndPassword(username, password)
         .then((user) => {
-            this.props.history.push('/');
+            this.props.history.push('/logbook');
         })
         .catch((error) => {
             this.setState({ error: error});
